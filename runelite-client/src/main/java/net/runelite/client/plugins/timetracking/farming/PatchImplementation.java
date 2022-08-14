@@ -1545,7 +1545,7 @@ public enum PatchImplementation
 				if (value >= 8 && value <= 10)
 				{
 					// Hammerstone Hops[Harvest,Inspect,Guide] 8181,8181,8181
-					return new PatchState(Produce.HAMMERSTONE, CropState.HARVESTABLE, value - 8);
+					return new PatchState(Produce.HAMMERSTONE, CropState.HARVESTABLE, 10 - value);
 				}
 				if (value >= 11 && value <= 15)
 				{
@@ -1555,7 +1555,7 @@ public enum PatchImplementation
 				if (value >= 16 && value <= 18)
 				{
 					// Asgarnian Hops[Harvest,Inspect,Guide] 8159,8159,8159
-					return new PatchState(Produce.ASGARNIAN, CropState.HARVESTABLE, value - 16);
+					return new PatchState(Produce.ASGARNIAN, CropState.HARVESTABLE, 18 - value);
 				}
 				if (value >= 19 && value <= 24)
 				{
@@ -1565,7 +1565,7 @@ public enum PatchImplementation
 				if (value >= 25 && value <= 27)
 				{
 					// Yanillian Hops[Harvest,Inspect,Guide] 8294,8294,8294
-					return new PatchState(Produce.YANILLIAN, CropState.HARVESTABLE, value - 25);
+					return new PatchState(Produce.YANILLIAN, CropState.HARVESTABLE, 27 - value);
 				}
 				if (value >= 28 && value <= 34)
 				{
@@ -1575,7 +1575,7 @@ public enum PatchImplementation
 				if (value >= 35 && value <= 37)
 				{
 					// Krandorian Hops[Harvest,Inspect,Guide] 8218,8218,8218
-					return new PatchState(Produce.KRANDORIAN, CropState.HARVESTABLE, value - 35);
+					return new PatchState(Produce.KRANDORIAN, CropState.HARVESTABLE, 37 - value);
 				}
 				if (value >= 38 && value <= 45)
 				{
@@ -1585,7 +1585,7 @@ public enum PatchImplementation
 				if (value >= 46 && value <= 48)
 				{
 					// Wildblood Hops[Harvest,Inspect,Guide] 8265,8265,8265
-					return new PatchState(Produce.WILDBLOOD, CropState.HARVESTABLE, value - 46);
+					return new PatchState(Produce.WILDBLOOD, CropState.HARVESTABLE, 48 - value);
 				}
 				if (value >= 49 && value <= 52)
 				{
@@ -1595,7 +1595,7 @@ public enum PatchImplementation
 				if (value >= 53 && value <= 55)
 				{
 					// Barley[Harvest,Inspect,Guide] 8196,8196,8196
-					return new PatchState(Produce.BARLEY, CropState.HARVESTABLE, value - 53);
+					return new PatchState(Produce.BARLEY, CropState.HARVESTABLE, 55 - value);
 				}
 				if (value >= 56 && value <= 60)
 				{
@@ -1605,7 +1605,7 @@ public enum PatchImplementation
 				if (value >= 61 && value <= 63)
 				{
 					// Jute[Harvest,Inspect,Guide] 8243,8243,8243
-					return new PatchState(Produce.JUTE, CropState.HARVESTABLE, value - 61);
+					return new PatchState(Produce.JUTE, CropState.HARVESTABLE, 63 - value);
 				}
 				if (value >= 64 && value <= 67)
 				{
