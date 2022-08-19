@@ -44,6 +44,10 @@ public abstract class StatBoost extends SingleEffect
 		this.boost = boost;
 	}
 
+	public boolean getBoost() {
+		return this.boost;
+	}
+
 	public abstract int heals(Client client);
 
 	@Override

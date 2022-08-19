@@ -24,6 +24,7 @@
  */
 package net.runelite.client.plugins.itemstats;
 
+import lombok.Getter;
 import net.runelite.client.plugins.itemstats.delta.DeltaCalculator;
 import net.runelite.client.plugins.itemstats.stats.Stat;
 import net.runelite.api.Client;
@@ -33,6 +34,7 @@ import net.runelite.api.Client;
  */
 public class SimpleStatBoost extends StatBoost
 {
+	@Getter
 	private final DeltaCalculator deltaCalculator;
 
 	public SimpleStatBoost(Stat stat, boolean boost, DeltaCalculator deltaCalculator)

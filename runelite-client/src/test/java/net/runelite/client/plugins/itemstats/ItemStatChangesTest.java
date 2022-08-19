@@ -24,14 +24,58 @@
  */
 package net.runelite.client.plugins.itemstats;
 
+import com.google.inject.Guice;
+import com.google.inject.testing.fieldbinder.Bind;
+import com.google.inject.testing.fieldbinder.BoundFieldModule;
+import net.runelite.api.Client;
+import net.runelite.client.plugins.itemstats.delta.DeltaCalculator;
+import net.runelite.client.plugins.itemstats.stats.Stats;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
+import static org.mockito.Mockito.when;
+
+@RunWith(MockitoJUnitRunner.class)
 public class ItemStatChangesTest
 {
+	@Mock
+	@Bind
+	private Client client;
+
+	@Mock
+	@Bind
+	private DeltaCalculator deltaCalculator;
+	@Before
+	public void before() {
+		Guice.createInjector(BoundFieldModule.of(this)).injectMembers(this);
+	}
 	@Test
 	public void testInit()
 	{
 		new ItemStatChanges();
+	}
+
+	@Test
+	public void testLMSBoostedStatBoost() {
+
+
+		when(Stats.RANGED.getMaximum(client)).thenReturn(86);
+		when(Stats.RANGED.getValue(client)).thenReturn(99);
+
+		ItemStatChanges changes = new ItemStatChanges();
+		// Ranging Potion (4)
+		Effect eff = changes.get(23551);
+		for(StatChange s : eff.calculate(client).getStatChanges()) {
+			System.out.println(s.getRelative());
+			System.out.println(s.getAbsolute());
+			System.out.println(s.getTheoretical());
+			System.out.println(s.getPositivity());
+		}
+
+
 	}
 
 }
