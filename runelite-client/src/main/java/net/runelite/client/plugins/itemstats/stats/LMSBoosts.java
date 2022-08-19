@@ -15,7 +15,8 @@ public class LMSBoosts
 
 	public static int skillMaximum(Stat stat, Client client)
 	{
-		switch(stat.getName()) {
+		switch (stat.getName())
+		{
 			case "Attack":
 				return ATTACK;
 			case "Strength":

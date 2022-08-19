@@ -5,8 +5,8 @@ import net.runelite.client.plugins.itemstats.delta.DeltaCalculator;
 import net.runelite.client.plugins.itemstats.stats.LMSBoosts;
 import net.runelite.client.plugins.itemstats.stats.Stat;
 
-public class LMSStatBoost extends SimpleStatBoost {
-
+public class LMSStatBoost extends SimpleStatBoost
+{
 	public LMSStatBoost(Stat stat, boolean boost, DeltaCalculator deltaCalculator)
 	{
 		super(stat, boost, deltaCalculator);
