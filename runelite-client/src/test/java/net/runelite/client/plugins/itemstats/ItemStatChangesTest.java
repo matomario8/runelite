@@ -28,7 +28,6 @@ import com.google.inject.Guice;
 import com.google.inject.testing.fieldbinder.Bind;
 import com.google.inject.testing.fieldbinder.BoundFieldModule;
 import net.runelite.api.Client;
-import net.runelite.client.plugins.itemstats.delta.DeltaCalculator;
 import net.runelite.client.plugins.itemstats.stats.Stats;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,9 +44,6 @@ public class ItemStatChangesTest
 	@Bind
 	private Client client;
 
-	@Mock
-	@Bind
-	private DeltaCalculator deltaCalculator;
 	@Before
 	public void before()
 	{
@@ -60,9 +56,8 @@ public class ItemStatChangesTest
 	}
 
 	@Test
-	public void testLMSBoostedStatBoost()
+	public void testLMSStatBoost()
 	{
-		when(Stats.RANGED.getMaximum(client)).thenReturn(86);
 		when(Stats.RANGED.getValue(client)).thenReturn(99);
 
 		ItemStatChanges changes = new ItemStatChanges();
