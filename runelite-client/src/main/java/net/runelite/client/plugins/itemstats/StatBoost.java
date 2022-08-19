@@ -44,7 +44,8 @@ public abstract class StatBoost extends SingleEffect
 		this.boost = boost;
 	}
 
-	public boolean getBoost() {
+	public boolean getBoost()
+	{
 		return this.boost;
 	}
 

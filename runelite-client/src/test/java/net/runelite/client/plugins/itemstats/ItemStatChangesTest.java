@@ -59,23 +59,20 @@ public class ItemStatChangesTest
 	}
 
 	@Test
-	public void testLMSBoostedStatBoost() {
-
-
+	public void testLMSBoostedStatBoost()
+	{
 		when(Stats.RANGED.getMaximum(client)).thenReturn(86);
 		when(Stats.RANGED.getValue(client)).thenReturn(99);
 
 		ItemStatChanges changes = new ItemStatChanges();
 		// Ranging Potion (4)
 		Effect eff = changes.get(23551);
-		for(StatChange s : eff.calculate(client).getStatChanges()) {
+		for(StatChange s : eff.calculate(client).getStatChanges())
+		{
 			System.out.println(s.getRelative());
 			System.out.println(s.getAbsolute());
 			System.out.println(s.getTheoretical());
 			System.out.println(s.getPositivity());
 		}
-
-
 	}
-
 }
