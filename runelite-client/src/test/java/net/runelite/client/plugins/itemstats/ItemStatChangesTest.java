@@ -49,7 +49,8 @@ public class ItemStatChangesTest
 	@Bind
 	private DeltaCalculator deltaCalculator;
 	@Before
-	public void before() {
+	public void before()
+	{
 		Guice.createInjector(BoundFieldModule.of(this)).injectMembers(this);
 	}
 	@Test
@@ -67,7 +68,7 @@ public class ItemStatChangesTest
 		ItemStatChanges changes = new ItemStatChanges();
 		// Ranging Potion (4)
 		Effect eff = changes.get(23551);
-		for(StatChange s : eff.calculate(client).getStatChanges())
+		for (StatChange s : eff.calculate(client).getStatChanges())
 		{
 			System.out.println(s.getRelative());
 			System.out.println(s.getAbsolute());
